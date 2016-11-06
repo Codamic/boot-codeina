@@ -28,9 +28,13 @@
        :license     {"Eclipse Public License" "http://www.eclipse.org/legal/epl-v10.html"}
        :scm         {:url "https://github.com/Codamic/boot-codeina"}}
 
+ jar  {:manifest    {"Description" +description+
+                     "Url"         "http://github.com/Codamic/boot-codeina"}}
+
  apidoc {:version +version+
          :title "Boot-Codeina"
          :sources #{"src"}
          :src-uri "https://github.com/Codamic/boot-codeina/tree/master/"
          :src-uri-prefix "#L"
-         :description +description+})
+         :description +description+}
+ push   {:repo "clojars"} )
