@@ -38,3 +38,19 @@
          :src-uri-prefix "#L"
          :description +description+}
  push   {:repo "clojars"} )
+
+
+(deftask build
+  "Build & install the library"
+  []
+  (comp (pom) (jar) (install) (target)))
+
+(deftask publish-snapshot
+  "Build and publish the jar to clojars"
+  []
+  (comp (pom) (jar) (push-snapshot)))
+
+(deftask publish
+  "Build and publish the jar to clojars"
+  []
+  (comp (pom) (jar) (push)))
